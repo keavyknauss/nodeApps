@@ -37,7 +37,7 @@ module.exports = function (app, config) {
 
    
 require('../app/models/todos.js');
-require('../app/controllers/todos.js');
+require('../app/controllers/todos.js')(app, config);
 
     app.use(function (req, res) {
         logger.log('error', 'File not found');
