@@ -11,14 +11,14 @@ var config = {
     test: {
         root: rootPath,
         app: {  name: 'UCCSS'   },
-        port: 3300,
+        port: 5000,
         db: 'mongodb://127.0.0.1/todo-test'
     },
 
     production: {
         root: rootPath,
         app: { name: 'UCCSS' },
-        port: 3300,
+        port: 3000,
         db: 'mongodb://127.0.0.1/todo'
     }
 };
