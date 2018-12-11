@@ -14,20 +14,20 @@
                                 </tr>
     
                                 <tr>
-                                    <th scope="col">High</th>
-                                    <th scope="col">Medium</th>
-                                    <th scope="col">Low</th>
+                                    <th scope="col">todo</th>
+                                    <th scope="col">priority</th>
+                                    <th scope="col">done</th>
                                 </tr>
                             </thead>
     
                         <tbody>
                             <tr repeat.for="todo of todos.todosArray">
-                                <td click.trigger="editFoo(foo)">${foo.firstName}</td>
-                                <td click.trigger="editFoo(foo)">${foo.lastName}</td>
-                                <td click.trigger="editFoo(foo)">${foo.role}</td>
+                                <td click.trigger="editTodo(todo)">${todo.high}</td>
+                                <td click.trigger="editTodo(todo)">${todo.medium}</td>
+                                <td click.trigger="editTodo(todo)">${todo.low}</td>
                                 <td>
                                         <div class="form-check">
-                                            <input class="form-check-input" change.delegate="changeActive(foo)" checked.bind="foo.active"
+                                            <input class="form-check-input" change.delegate="changeActive(todo)" checked.bind="todo.active"
                                                 type="checkbox" value="" id="defaultCheck1">
                                         </div>
                                 </td>
