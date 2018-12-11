@@ -1,0 +1,30 @@
+<template>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <div class="form-group" style="margin-top:20px;">
+                        <label for="high">High</label>
+                        <input type="email" class="form-control" value.bind="todo.high" id="high" placeholder="High">
+                    </div>
+    
+                    <div class="form-group" style="margin-top:20px;">
+                        <label for="medium">Medium</label>
+                        <input type="email" class="form-control" value.bind="todo.medium" id="medium" placeholder="Medium">
+                    </div>
+    
+                    <div class="form-group" style="margin-top:20px;">
+                        <label for="low">Low</label>
+                        <input type="email" class="form-control" value.bind="todo.low" id="low" placeholder="Low">
+                    </div>
+    
+                    <div class="list-group-item">
+                        <span click.trigger="back()"><i data-feather="arrow-left-circle"></i></span>
+                        <span click.trigger="save()" style="margin-left:5px;"><i data-feather="save"></i></span>
+                        <span show.bind="todo._id" click.trigger="delete()"><i data-feather="trash-2"></i></span>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </template>
