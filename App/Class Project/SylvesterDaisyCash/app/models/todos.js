@@ -8,6 +8,5 @@ var todoSchema = new Schema({
 
 });
 
-module.exports =
-    Mongoose.model('Todo', todoSchema);
+module.exports = Mongoose.model('Todo', todoSchema);
   

@@ -2,12 +2,12 @@ import { inject } from 'aurelia-framework';
 import { Router } from 'aurelia-router';
 import { HelpTicket } from '../resources/data/help-ticket-object'
 
-
 @inject(Router, HelpTicket)
 
 export class HelpTickets {
     constructor(router, helpTicket) {
-        this.helpTickets = helpTicket;
+        this.router = router;
+        this.helpTickets = helpTickets;
         this.showHelpTicketEditForm = false;
         this.userObj = JSON.parse(sessionStorage.getItem('userObj'));
     }
@@ -25,6 +25,7 @@ export class HelpTickets {
         setTimeout(() => { $("#firstName").focus(); }, 500);
     }
 
+    
     async getHelpTickets() {
         await this.helpTickets.getHelpTickets(this.userObj);
     }
