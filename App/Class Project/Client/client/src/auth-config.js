@@ -7,5 +7,4 @@ var authConfig = {
     logoutRedirect: '#/landing'
 }
 
-
 export default authConfig;

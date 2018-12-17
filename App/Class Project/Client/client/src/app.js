@@ -11,21 +11,18 @@ export class App {
         name: 'Landing',
         auth: false
       },
-
       {
         route: 'home',
         moduleId: './modules/home',
         name: 'Home',
         auth: true
       },
-
       {
         route: 'users',
         moduleId: './modules/users',
         name: 'Users',
         auth: true
       },
-
       {
         route: 'helpTickets',
         moduleId: './modules/helpTickets',

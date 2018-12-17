@@ -7,7 +7,8 @@ import { HelpTicket } from '../resources/data/help-ticket-object'
 export class HelpTickets {
     constructor(router, helpTicket) {
         this.router = router;
-        this.helpTickets = helpTickets;
+        this.helpTickets = helpTicket;
+        this.message = "HelpTickets"
         this.showHelpTicketEditForm = false;
         this.userObj = JSON.parse(sessionStorage.getItem('userObj'));
     }
@@ -25,7 +26,7 @@ export class HelpTickets {
         setTimeout(() => { $("#firstName").focus(); }, 500);
     }
 
-    
+
     async getHelpTickets() {
         await this.helpTickets.getHelpTickets(this.userObj);
     }

@@ -11,15 +11,12 @@ export class Users {
         this.message = 'Users';
         this.showUserEditForm = false;
     }
-
     async activate() {
         await this.getUsers();
     }
-
     attached() {
         feather.replace()
     }
-
     async getUsers() {
         await this.users.getUsers();
     }
@@ -33,8 +30,7 @@ export class Users {
             email: "",
             password: ""
         }
-
-        this.openEditForm();
+        this.openEditFrom();
     }
 
     openEditForm() {
@@ -53,17 +49,14 @@ export class Users {
         this.showUserEditForm = true;
     }
 
-    
-
     async save() {
         if (this.user && this.user.firstName && this.user.lastName
-            && this.user.email && this.user.password) {
+            && this.user.email && this.user.password) 
             await this.users.saveUser(this.user);
             await this.getUsers();
             this.back();
-        }
+        
     }
-
 
     async delete() {
         if (this.user) {
