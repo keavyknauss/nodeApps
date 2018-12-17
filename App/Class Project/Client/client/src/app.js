@@ -21,13 +21,13 @@ export class App {
         route: 'users',
         moduleId: './modules/users',
         name: 'Users',
-        auth: true
+        auth: false
       },
       {
         route: 'helpTickets',
         moduleId: './modules/helpTickets',
         name: 'HelpTickets',
-        auth: true
+        auth: false
       }
     ])
   }
