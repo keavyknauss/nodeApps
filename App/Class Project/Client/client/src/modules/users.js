@@ -30,7 +30,7 @@ export class Users {
             email: "",
             password: ""
         }
-        this.openEditFrom();
+        this.openEditForm();
     }
 
     openEditForm() {

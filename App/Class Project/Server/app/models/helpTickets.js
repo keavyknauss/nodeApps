@@ -5,7 +5,7 @@ var HelpTicketContentSchema = new Schema({
     personId: { type: Schema.Types.ObjectId },
     content: { type: String },
     dateCreated: { type: Date, default: Date.now },
-    helpTicket: { type: Schema.Types.ObjectId },
+    helpTicketId: { type: Schema.Types.ObjectId },
     file: {
         fileName: { type: String },
         originalFileName: { type: String },

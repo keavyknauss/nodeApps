@@ -26,16 +26,14 @@ export class HelpTicket {
     }
 
 
-    async getHelpTicketsContents(userObj) {
-        let url = this.HELP_TICKET_SERVICE;
-        if (userObj.role == 'user') {
-            url += '/user/' + userObj._id;
-        }
+    async getHelpTicketsContents(id) {
+        let url = this.HELPTICKETCONTENT_SERVICE + '/helpTicket/'+ id;
+
         let response = await this.data.get(url);
         if (!response.error) {
-            this.helpTicketsArray = response;
+            this.helpTicketsContentArray = response;
         } else {
-            this.helpTicketsArray = [];
+            this.helpTicketsContentArray = [];
         }
     }
 

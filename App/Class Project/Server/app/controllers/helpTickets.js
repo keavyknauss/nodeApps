@@ -45,9 +45,10 @@ module.exports = function (app, config) {
                 if (req.body.content) {
                     req.body.content.helpTicketId = result._id;
                     var helpTicketContent = new HelpTicketContent(req.body.content);
+                    console.log(helpTicketContent)
                     helpTicketContent.save()
                         .then(content => {
-                                                        res.status(201).json({ contentID: content._id });
+                            res.status(201).json({ contentID: content._id });
                         })
                 } else {
                     res.status(200).json(result);
@@ -132,16 +133,16 @@ module.exports = function (app, config) {
     router.post('/helpTicketContents/upload/:id', upload.any(), asyncHandler(async (req, res) => {
         logger.log('info', 'Uploading files');
         await HelpTicketContent.findById(req.params.id).then(result => {
-                        for (var i = 0, x = req.files.length; i < x; i++) {
+            for (var i = 0, x = req.files.length; i < x; i++) {
                 var file = {
-                                    originalFileName: req.files[i].originalname,
-                                    fileName: req.files[i].filename
+                    originalFileName: req.files[i].originalname,
+                    fileName: req.files[i].filename
                 };
                 result.file = file;
-                        }
-                        result.save().then(result => {
-                                res.status(200).json(result);
-                        });
+            }
+            result.save().then(result => {
+                res.status(200).json(result);
+            });
         })
     }));
 };
